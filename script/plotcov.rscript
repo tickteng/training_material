@@ -1,20 +1,24 @@
-library(dplyr)
-library(ggplot2)
+#!/usr/bin/env Rscript
 args = commandArgs(trailingOnly=TRUE)
+library(ggplot2)
+library(dplyr)
 
 datapath <- args[1]
 samplename=paste0(args[3], args[2], ".png")
 fileloc <- args[3]
 title=paste0("Mapping coverage for sample", args[2])
 
-data <- read.delim(datapath, header=FALSE)
-id <- read.delim(file="./id", header=FALSE)
-data <- inner_join(data, id, by = "V1")
-x1 <- unique(data %>% pull(V2.y))
-data$gene <- factor(data$V2.y, levels=x1)
+mindepth <- as.numeric(args[4])
 
+#part1
+data <- read.delim(datapath, header=FALSE)
+data <- data %>% mutate(log_depth = log10(V3))
+x1 <- unique(data %>% pull(V1))
+data$gene <- factor(data$V1, levels=x1)
+
+#generate graph
 png(filename = samplename, units = "cm", height = 36, width = 18, res = 500)
-covplot <- ggplot(data, aes(x = V2.x, y = V3)) + geom_line(stat = "identity")
+covplot <- ggplot(data, aes(x = V2, y = V3)) + geom_line(stat = "identity")
 covplot + ylab("Depth") + xlab("Position") +
 	geom_hline(yintercept=5, linetype="dashed", color = "red")+ ggtitle(title) +
 	facet_wrap(~gene, scales="free", ncol = 1)
