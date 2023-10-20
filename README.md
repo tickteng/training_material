@@ -6,9 +6,7 @@ List of folders and content:
 
 ./aln/sample04.bam.gz: alignment file of sample04 to Hg38.
 
-./db/:ref.fa contains reference sequence obtained from https://gisaid.org/.
-
-./fast5/: subset of data from https://www.ncbi.nlm.nih.gov/bioproject/PRJNA779209. The SRA accession of the data are: SRR16896825, SRR16896826, and SRR16896827.
+./db/:fluadb.fa contains reference sequence obtained from https://gisaid.org/.
 
 ./fastq/: subset of fastq files obtained from public database
 1. sample01: Nanopore reads, Influenza A, SRR23318372
