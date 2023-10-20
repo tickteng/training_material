@@ -6,7 +6,7 @@ library(dplyr)
 datapath <- args[1]
 samplename=paste0(args[3], args[2], ".png")
 fileloc <- args[3]
-title=paste0("Mapping coverage for sample", args[2])
+title=paste0("Mapping coverage for ", args[2])
 
 mindepth <- as.numeric(args[4])
 
