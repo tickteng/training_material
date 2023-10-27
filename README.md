@@ -9,10 +9,12 @@ List of folders and content:
 ./db/:fluadb.fa contains reference sequence obtained from https://gisaid.org/.
 
 ./fastq/: subset of fastq files obtained from public database
-1. sample01: Nanopore reads, Influenza A, SRR23318372
-2. sample02: Nanopore reads, Influenza A, https://doi.org/10.5066/P93VXVGO
-3. sample03: Nanopore reads, Influenza A, inhouse
-4. sample04: Illumina reads, metagenomics, SRR10971381
+1. sample01: Nanopore reads, Influenza A, subset from SRR23318372
+2. sample02: Nanopore reads, Influenza A, subset from https://doi.org/10.5066/P93VXVGO
+3. sample03: Nanopore reads, Influenza A, inhouse (subset)
+4. sample04: Illumina reads, metagenomics, subset from SRR10971381
 5. sample05: Illumina reads, Influenza A, SRR18273474 
 
-./script/: plotcov.rscript is an rscript to plot the coverage across the genome.
+./pdf/: presentations and step-by-step guide.
+
+./script/: plotcov.rscript is an rscript to plot the coverage across the genome using the output from samtools depth.
