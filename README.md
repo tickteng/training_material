@@ -1,7 +1,6 @@
 This directory contains the data for training material
 
-Step-by-step information can be found here: https://wool-hour-a95.notion.site/EFSA-training-eab42c4d48e64a7cb8a720941e8b9942?pvs=4
-
+Step-by-step information can be found here: https://tickteng.notion.site/EFSA-training-eab42c4d48e64a7cb8a720941e8b9942?pvs=4
 List of folders and content:
 
 ./aln/sample04.bam.gz: alignment file of sample04 to Hg38.
